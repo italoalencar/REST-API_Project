@@ -3,7 +3,7 @@ import brands from "./BrandRoutes.js";
 
 const routes = (app) => {
     app.route('/').get((req, res) => {
-        res.status(200).send({titulo: "Marcas"});
+        res.status(200).json({titulo: "Marcas"});
     });
 
     app.use(express.json(),
