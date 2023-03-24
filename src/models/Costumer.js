@@ -3,13 +3,13 @@ import mongoose from "mongoose";
 const costumerSchema = mongoose.Schema(
     {
         id: {type: String},
-        nameHQ: {type: String, required: true},
-        owner: {type: String},
-        responsible: {type: String},
+        name: {type: String, required: true},
+        cpf: {type: String, required: true},
+        email: {type: String, required: true},
         fixedPhone: {type: String},
         phone: {type: String, required: true},
-        isActive: {type: Date}
-        
+        address: {type: String, required: true},
+        isActive: {type: Date, required: true}     
     }
 );
 

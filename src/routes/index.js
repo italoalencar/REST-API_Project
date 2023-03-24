@@ -1,5 +1,6 @@
 import express from "express";
 import brands from "./BrandRoutes.js";
+import headquarters from "./HeadquarterRoutes.js";
 import costumers from "./CostumerRoutes.js"
 
 const routes = (app) => {
@@ -9,7 +10,9 @@ const routes = (app) => {
 
     app.use(express.json(),
     brands,
-    costumers);
+    costumers,
+    headquarters,
+    );
 }
 
 export default routes;
