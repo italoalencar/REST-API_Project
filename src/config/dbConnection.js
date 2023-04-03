@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
+import { readFileSync } from 'fs';
 
-mongoose.connect("mongodb+srv://littledoors:littledoors123@cluster0.skb2mzu.mongodb.net/sme")
+const password = readFileSync("./bd.txt", "utf-8");
+mongoose.connect(password)
 
 let db = mongoose.connection;
 
